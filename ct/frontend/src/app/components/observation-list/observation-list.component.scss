@@ -1,0 +1,26 @@
+.observation-list{
+  padding: 20px;
+  background-color: #cbd2dd;
+  border-radius:8px ;
+}
+h1{
+  text-align: center;
+
+}
+.observation-items{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 8px;
+}
+
+.observation-info{
+  display: flex;
+  align-items: center;
+}
+.observation-id{
+  font-size: 1rem;
+  font-weight: bold;
+  color: #1b1b1b;
+}

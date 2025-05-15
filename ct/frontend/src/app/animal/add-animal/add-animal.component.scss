@@ -1,0 +1,47 @@
+
+
+  
+
+  .animal-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0px !important;
+    background-color: #fff;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+  }
+  
+
+  .mat-form-field {
+    
+    width: 200%;
+    margin-bottom: 16px;
+  }
+  
+
+  .title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #3f51b5;  
+  }
+  
+
+  .submit-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    border-radius: 4px;
+  }
+  
+  .form-group {
+    margin-bottom: 16px;
+  }
+  

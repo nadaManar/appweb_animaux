@@ -1,0 +1,23 @@
+<mat-card class="animal-card">
+  <mat-card-title class="card-title">Détails de l'animal</mat-card-title>
+@if (animal$ | async; as animal) {
+    <mat-card>
+      <mat-card-content class="card-content">
+        <p><strong>Nom savant:</strong> {{ animal.nomSavant }}</p>
+        <p><strong>Embranchement:</strong> {{ animal.embranchement }}</p>
+        <p><strong>Classe:</strong> {{ animal.classe }}</p>
+        <p><strong>Ordre:</strong> {{ animal.ordre }}</p>
+        <p><strong>Sous-ordre:</strong> {{ animal.sousOrdre }}</p>
+        <p><strong>Famille:</strong> {{ animal.famille }}</p>
+        <p><strong>Genre:</strong> {{ animal.genre }}</p>
+        <p><strong>IUCN:</strong> {{ animal.iucn }}</p>
+      </mat-card-content>
+      
+      <mat-card-actions>
+        <button mat-raised-button color="accent" (click)="modify()">Modifier</button>
+        <button mat-raised-button color="warn" (click)="delete()">Supprimer</button>
+      </mat-card-actions>
+    </mat-card>
+  }
+</mat-card>
+  

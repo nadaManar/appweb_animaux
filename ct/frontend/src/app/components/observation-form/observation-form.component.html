@@ -1,0 +1,34 @@
+<h2 class="title">Ajouter une Observation</h2>
+
+<form [formGroup]="observationForm" (ngSubmit)="submit()" class="observation-form">
+
+  <mat-form-field appearance="fill" class="form-group">
+    <mat-label>Date et Heure</mat-label>
+    <input matInput type="datetime-local" id="dateHeure" formControlName="dateHeure" placeholder="Enter date et heure">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="form-group">
+    <mat-label>Latitude</mat-label>
+    <input matInput type="number" id="latitude" formControlName="latitude" placeholder="Enter latitude">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="form-group">
+    <mat-label>Longitude</mat-label>
+    <input matInput type="number" id="longitude" formControlName="longitude" placeholder="Enter longitude">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field appearance="fill" class="form-group">
+    <mat-label>Description</mat-label>
+    <textarea matInput id="description" formControlName="description" placeholder="Enter description" rows="5"></textarea>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="form-group">
+    <mat-label>Animal</mat-label>
+    <mat-select formControlName="animal" required>
+      <mat-option *ngFor="let animal of animals" [value]="animal.id">{{ animal.nomCommun }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" class="submit-button">Soumettre</button>
+</form>

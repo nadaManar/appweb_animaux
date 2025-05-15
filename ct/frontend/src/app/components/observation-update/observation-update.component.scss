@@ -1,0 +1,46 @@
+h1{
+  text-align: center;
+  color: #001b44;
+}
+form {
+  display: flex;
+  max-width: 500px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #f4f4f9;
+  border-radius: 8px;
+
+}
+div{
+  width:100%;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 8px;
+}
+
+
+.submit-button{
+  width: 100%;
+  padding:10px;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: #96ccff;
+}
+label{
+  color: #96ccff;
+  font-size: 14px;
+}
+

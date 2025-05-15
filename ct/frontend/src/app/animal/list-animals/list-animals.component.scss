@@ -1,0 +1,54 @@
+.animal-list-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #3f51b5;
+}
+
+.animal-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.animal-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.animal-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.Coeur{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 8rem;
+  animation: giggleFadeOut 1s forwards;
+  opacity: 1;
+}
+@keyframes giggleFadeOut {
+  0% {opacity: 1;transform: translate(-50%,-50%) scale(1) rotate(0deg);}
+  10% {opacity: 1;transform: translate(-50%,-50%) scale(1.1) rotate(5deg);}
+  20% {opacity: 1;transform: translate(-50%,-50%) scale(1) rotate(-5deg);}
+  30% {opacity: 1;transform: translate(-50%,-50%) scale(1.1) rotate(-5deg);}
+  40% {opacity: 1;transform: translate(-50%,-50%) scale(1) rotate(-3deg);}
+  50% {opacity: 1;transform: translate(-50%,-50%) scale(1.2) rotate(0deg);}
+
+  100% {opacity: 0;transform: translate(-50%,-50%) scale(1.5) rotate(0deg);}
+
+}

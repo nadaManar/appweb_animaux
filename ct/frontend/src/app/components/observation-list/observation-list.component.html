@@ -1,0 +1,26 @@
+<div class="observation-list">
+  <h1>Listes des observations</h1>
+ <mat-list>
+   @for (observation of observations; track observation.id){
+     <mat-list-item class="observation-items">
+       <div class="observation-info">
+         <span class="observation-id style=" style="color: black;" >ID : {{observation.id ?? 'aucun id'}}</span>
+         <button mat-stroked-button color="primary " [routerLink]="['/observations',observation.id]">
+           details
+         </button>
+         <button mat-stroked-button color="accent " [routerLink]="['/observation-update',observation.id]">
+           UPDATE
+         </button>
+         <button mat-stroked-button color="warn " (click)="delete(observation.id)">
+           DELETE
+         </button>
+
+
+       </div>
+     </mat-list-item>
+     <mat-divider></mat-divider>
+   }
+
+  </mat-list>
+ <button mat-raised-button (click)="loadNextPage()"> Page suivante</button>
+</div>

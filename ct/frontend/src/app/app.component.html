@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+  <button mat-button [routerLink]="['/about']">A propos</button>
+  <button mat-button [routerLink]="['/observations']">Observations</button>
+  <button mat-button [routerLink]="['/animals']">Animals</button>
+
+  <span class="spacer"></span>
+
+  <ng-container *ngIf="!auth.isAuthentified">
+    <button mat-raised-button color="accent" routerLink="/login">Login</button>
+    <button mat-raised-button color="primary" routerLink="/register">Register</button>
+  </ng-container>
+
+  <ng-container *ngIf="auth.isAuthentified">
+    <span class="greeting">Hello {{ auth.email }}</span>
+    <button mat-raised-button color="warn" (click)="auth.logout()">
+      Logout
+    </button>
+  </ng-container>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

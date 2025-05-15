@@ -1,0 +1,22 @@
+<form #loginForm="ngForm" *ngIf="!auth.isAuthentified; else Welcome">
+    <div class="stack">
+      <mat-form-field class="half-width">
+        <mat-label>Username</mat-label>
+        <input matInput name="title" type="text" 
+              [(ngModel)]="username" required 
+              (ngModelChange)="auth.reset_error()">
+      </mat-form-field>
+      <mat-form-field class="half-width">
+        <mat-label>Password</mat-label>
+        <input matInput name="title" type="password" [(ngModel)]="password" 
+          required (ngModelChange)="auth.reset_error()">
+      </mat-form-field>
+      <button [disabled]="!isValid" mat-raised-button (click)="login()">
+        Login</button>
+      <button mat-flat-button [hidden]="!auth.error" class="warn">
+        Authentication failed </button>
+    </div>
+  </form>
+  <ng-template #Welcome>
+    <h1 class="stack">Welcome {{auth.email}}!</h1>
+  </ng-template>

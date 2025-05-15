@@ -1,0 +1,32 @@
+<h1>Mise a jour de l'observation</h1>
+<form [formGroup]="observationForm" (ngSubmit)="submit()">
+  <mat-form-field appearance="fill" class="form-group">
+    <mat-label >Date et Heure</mat-label>
+    <input matInput id="dateHeure" formControlName="dateHeure" type="datetime-local">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="form-group">
+    <mat-label >Latitude</mat-label>
+    <input  matInput id="latitude" formControlName="latitude" type="number">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="form-group">
+    <mat-label >Longitude</mat-label>
+    <input matInput id="longitude" formControlName="longitude" type="number">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="form-group">
+    <mat-label >Description</mat-label>
+    <textarea matInput id="description" formControlName="description"></textarea>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="form-group">
+
+    <mat-label >Animal</mat-label>
+    <mat-select formControlName="animal">
+      <mat-option *ngFor="let animal of animals" [value]="animal.id">{{ animal.nomCommun }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="observationForm.invalid">Mettre à jour</button>
+</form>

@@ -1,0 +1,64 @@
+<h2 class="title">Éditer Animal</h2>
+
+<form [formGroup]="animalForm" (ngSubmit)="submit()" class="animal-form">
+  <mat-form-field appearance="fill" class="form-group">
+    <mat-label>Nom Commun</mat-label>
+    <input matInput id="nomCommun" formControlName="nomCommun" type="text" placeholder="Enter animal nomCommun">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="form-group">
+    <mat-label>Nom Savant</mat-label>
+    <input matInput id="nomSavant" formControlName="nomSavant" type="text" placeholder="Enter nomSavant">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="form-group">
+    <mat-label>Embranchement</mat-label>
+    <input matInput id="embranchement" formControlName="embranchement" type="text" placeholder="Enter embranchement">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="form-group">
+    <mat-label>Classe</mat-label>
+    <input matInput id="classe" formControlName="classe" type="text" placeholder="Enter classe">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="form-group">
+    <mat-label>Ordre</mat-label>
+    <input matInput id="ordre" formControlName="ordre" type="text" placeholder="Enter ordre">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="form-group">
+    <mat-label>Sous Ordre</mat-label>
+    <input matInput id="sousOrdre" formControlName="sousOrdre" type="text" placeholder="Enter sousOrdre">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="form-group">
+    <mat-label>Famille</mat-label>
+    <input matInput id="famille" formControlName="famille" type="text" placeholder="Enter famille">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="form-group">
+    <mat-label>Genre</mat-label>
+    <input matInput id="genre" formControlName="genre" type="text" placeholder="Enter genre">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="form-group">
+    <mat-label>Description</mat-label>
+    <textarea matInput id="description" formControlName="description" placeholder="Enter description" rows="5"></textarea>
+  </mat-form-field>
+  
+
+  <mat-form-field appearance="fill" class="form-group">
+    <mat-label>IUCN</mat-label>
+    <mat-select id="iucn" formControlName="iucn">
+      <mat-option value="LC">Least Concern</mat-option>
+      <mat-option value="NT">Near Threatened</mat-option>
+      <mat-option value="VU">Vulnerable</mat-option>
+      <mat-option value="EN">Endangered</mat-option>
+      <mat-option value="CR">Critically Endangered</mat-option>
+      <mat-option value="EW">Extinct in the Wild</mat-option>
+      <mat-option value="EX">Extinct</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">Mettre à jour</button>
+</form>

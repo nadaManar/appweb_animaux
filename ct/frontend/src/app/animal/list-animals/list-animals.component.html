@@ -1,0 +1,34 @@
+<div class="animal-list-container">
+  <h2 class="title">Liste des Animaux</h2>
+
+  <mat-list>
+    @for (animal of animalList; track animal.id) {
+      <mat-list-item class="animal-list-item">
+        <div class="animal-info">
+          <span class="animal-name">{{ animal.nomCommun }}</span>
+          <button mat-stroked-button color="primary" [routerLink]="['/animal', animal.id]">
+            Voir
+          </button>
+          @if (isFavorite(animal)){
+            <button mat-button (click)="removeFromFavorites(animal)" color="accent">
+              Enlever des favoris
+            </button>
+          }
+          @else {
+            <button mat-button (click)="addToFavorites(animal)" color="accent">
+              Ajouter aux favoris
+            </button>
+          }
+          @if(ispopupv(animal)){
+            <span class="coeur">❤️</span>
+          }
+        </div>
+      </mat-list-item>
+      @if(Coeur){
+        <div class="Coeur">❤️</div>
+      }
+      <mat-divider></mat-divider>
+    }
+  </mat-list>
+
+</div>

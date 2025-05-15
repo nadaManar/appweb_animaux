@@ -1,0 +1,42 @@
+<h1>Register</h1>
+
+<form [formGroup]="registerForm" (submit)="submit()" style="max-width: 400px; margin: auto; display: flex; flex-direction: column; gap: 16px;">
+
+  <mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <input matInput id="email" type="email" formControlName="email">
+    <mat-error *ngIf="registerForm.get('email')?.errors?.['required']">Email requis</mat-error>
+    <mat-error *ngIf="registerForm.get('email')?.errors?.['email']">Email invalide</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Prénom</mat-label>
+    <input matInput id="firstname" type="text" formControlName="firstname">
+    <mat-error *ngIf="registerForm.get('firstname')?.errors?.['required']">Prénom requis</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Nom</mat-label>
+    <input matInput id="lastname" type="text" formControlName="lastname">
+    <mat-error *ngIf="registerForm.get('lastname')?.errors?.['required']">Nom requis</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Mot de passe</mat-label>
+    <input matInput id="password" type="password" formControlName="password">
+    <mat-error *ngIf="registerForm.get('password')?.errors?.['required']">Mot de passe requis</mat-error>
+    <mat-error *ngIf="registerForm.get('password')?.errors?.['minlength']">Min. 6 caractères</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Rôle</mat-label>
+    <mat-select id="role" formControlName="role">
+      <mat-option value="ROLE_USER">Utilisateur</mat-option>
+      <mat-option value="ROLE_ADMIN">Administrateur</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="registerForm.invalid">
+    S'inscrire
+  </button>
+</form>

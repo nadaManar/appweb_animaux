@@ -1,0 +1,13 @@
+<div *ngIf="observations$ | async as observation; else loading" class="details">
+  <h1>Détails de l'Observation</h1>
+  <p><strong>ID :</strong> {{ observation.id }}</p>
+  <p><strong>Date et Heure :</strong> {{ observation.dateHeure }}</p>
+  <p><strong>Latitude :</strong> {{ observation.latitude }}</p>
+  <p><strong>Longitude :</strong> {{ observation.longitude }}</p>
+  <p><strong>Description :</strong> {{ observation.description || 'Aucune description' }}</p>
+  <p><strong>Animal :</strong> {{ observation.animal }}</p>
+</div>
+
+<ng-template #loading>
+  <p>Chargement...</p>
+</ng-template>
